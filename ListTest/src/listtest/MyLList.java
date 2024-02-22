@@ -1,17 +1,12 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+/*************************************************
+File: MyLList.java
+By: Eiffel Valentino with code from Karun Mehta
+Date: 2/21/2024
+Description: Takes input from the user and
+evaluates the infix and postfix expressions
+*************************************************/
 package listtest;
 
-//import java.util.*;
-//import queuetest.LinkedQueue;
-
-/**
- *
- * @author kmehta, eiffelv
- */
 public class MyLList<E> implements ListInterface<E> {
  
     private boolean integrityOK;
@@ -69,39 +64,6 @@ public class MyLList<E> implements ListInterface<E> {
         return false;
     }
     
-    /*
-    public void printAll() {
-        
-        E[] arr = this.toArray();
-        for(int i = 0; i < arr.length; i++) {
-            System.out.println(arr[i]);
-        }
-    }
-    
-    public String toArray() {
-       
-        boolean done = false;
-        if(firstNode == null) return null;
-        
-        String outputStr = "[";
-
-        int count = 0;
-        ListNode currentNode = firstNode;
-        
-        do {
-            outputStr += currentNode.getData().toString();
-            count++;
-            if(currentNode.next == null)
-                done = true;
-            else currentNode = currentNode.next;
-        } while (!done);
-        
-        return outputStr += "]";
-        
-    }// end toArray
-    
-    */
-    
     public void printAll() {
         
         Comparable<E>[] arr = this.toArray();
@@ -135,7 +97,7 @@ public class MyLList<E> implements ListInterface<E> {
     }// end toArray
     
     
-    private ListNode getNodeAt(int givenPosition) {
+    public ListNode getNodeAt(int givenPosition) {
         
         checkIntegrity();
         // use temporary node currentNode to traverse

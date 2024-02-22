@@ -1,3 +1,10 @@
+/*************************************************
+File: ListWithIterator.java
+By: Eiffel Valentino
+Date: 2/21/2024
+Description: A class that extends MyLList and implements ListWithIteratorInterface
+*************************************************/
+
 package listtest;
 
 import java.util.Iterator;
@@ -22,7 +29,7 @@ public class ListWithIterator<T> extends MyLList<T> implements ListWithIteratorI
         private ListNode nextNode;
 
         private IteratorForList() {
-            nextNode = null;
+            nextNode = getNodeAt(0);
         }
 
         @Override

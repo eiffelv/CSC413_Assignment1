@@ -19,8 +19,8 @@ public class ExpressionDriver {
             String d = scanner.nextLine();
             String infix = "("+a+"+"+b+")*("+c+"+"+d+")";
             String postfix = a+c+"-"+b+"^"+d+"+";
-            System.out.println("Value of infix string " + infix + " with a = " + a + ", b = " + b + ", c = " + c + ", d = " + d + " is " + InfixEvaluator.evaluateInfix(infix));
-            System.out.println("Value of postfix string " + postfix + " with a = " + a + ", b = " + b + ", c = " + c + ", d = " + d + " is " + PostFixEvaluator.evaluatePostfix(postfix));
+            System.out.println("Value of infix string (a+b)*(c*d) with a = " + a + ", b = " + b + ", c = " + c + ", d = " + d + " is " + InfixEvaluator.evaluateInfix(infix));
+            System.out.println("Value of postfix string ac-b^d+ with a = " + a + ", b = " + b + ", c = " + c + ", d = " + d + " is " + PostFixEvaluator.evaluatePostfix(postfix));
             System.out.println("Do you want to continue? (yes/no)");
             if (scanner.nextLine().equalsIgnoreCase("no")) {
                 break;
